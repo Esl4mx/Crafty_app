@@ -32,6 +32,7 @@ dependencies:
   dots_indicator: ^3.0.0
   flutter:
     sdk: flutter
+  shared_preferences: ^2.3.5
 
 dev_dependencies:
   flutter_lints: ^4.0.0
@@ -63,6 +64,13 @@ flutter:
     - family: Switzer
       fonts:
         - asset: assets/fonts/Switzer-Regular.otf
+          weight: 400
+        - asset: assets/fonts/Switzer-Medium.otf
+          weight: 500
+        - asset: assets/fonts/Switzer-Semibold.otf
+          weight: 600
+        - asset: assets/fonts/Switzer-Bold.otf
+          weight: 700
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 flutter_assets:

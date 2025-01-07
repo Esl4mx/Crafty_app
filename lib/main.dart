@@ -1,8 +1,11 @@
 import 'package:crafty_app/core/helper_functions/on_generate_routes.dart';
-import 'package:crafty_app/features/splash_screen/presentation/view/splash_view.dart';
+import 'package:crafty_app/core/services/shared_preferences_singleton.dart';
+import 'package:crafty_app/core/wigets/app_layout_views.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await prefs.init();
   runApp(const Crafty());
 }
 
@@ -14,7 +17,7 @@ class Crafty extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoute,
-      initialRoute: SplashView.routeName,
+      initialRoute: AppLayoutViews.routeName,
     );
   }
 }

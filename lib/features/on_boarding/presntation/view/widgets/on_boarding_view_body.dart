@@ -1,5 +1,7 @@
 import 'package:crafty_app/constants.dart';
+import 'package:crafty_app/core/services/shared_preferences_singleton.dart';
 import 'package:crafty_app/core/wigets/custom_button.dart';
+import 'package:crafty_app/features/auth/presntation/views/login_view.dart';
 import 'package:crafty_app/features/on_boarding/presntation/view/widgets/dots_indicator_list_view.dart';
 import 'package:crafty_app/features/on_boarding/presntation/view/widgets/on_boarding_page_view.dart';
 import 'package:crafty_app/features/on_boarding/presntation/view/widgets/on_boarding_skip_button.dart';
@@ -54,7 +56,11 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
                 child: CustomButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    prefs.setBool(kIsOnboardingViewSeen, true);
+                    Navigator.of(context)
+                        .pushReplacementNamed(LoginView.routeName);
+                  },
                   text: "Get Started",
                 ),
               )
