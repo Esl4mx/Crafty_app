@@ -108,6 +108,24 @@ abstract class AppStyles {
       fontFamily: "Switzer",
     );
   }
+
+  static TextStyle styleRegular14() {
+    return const TextStyle(
+      color: Color(0xff828A89),
+      fontSize: 14,
+      fontWeight: FontWeight.normal,
+      fontFamily: "Switzer",
+    );
+  }
+
+  static TextStyle styleMedium14() {
+    return const TextStyle(
+      color: Color(0xff101817),
+      fontSize: 14,
+      fontWeight: FontWeight.w500,
+      fontFamily: "Switzer",
+    );
+  }
 }
 
 // double getResponsiveFontsize(BuildContext context, {required double fontsize}) {

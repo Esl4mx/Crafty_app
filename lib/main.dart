@@ -14,7 +14,11 @@ class Crafty extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+          fontFamily: "Switzer",
+          appBarTheme: const AppBarTheme(backgroundColor: Color(0xffF9F9F9)),
+          scaffoldBackgroundColor: const Color(0xffF9F9F9)),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoute,
       initialRoute: AppLayoutViews.routeName,

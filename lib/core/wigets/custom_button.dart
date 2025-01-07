@@ -3,9 +3,14 @@ import 'package:crafty_app/core/utlis/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.onPressed, required this.text});
+  const CustomButton(
+      {super.key,
+      required this.onPressed,
+      required this.child,
+      this.buttonColor});
   final VoidCallback onPressed;
-  final String text;
+  final Widget child;
+  final Color? buttonColor;
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +21,9 @@ class CustomButton extends StatelessWidget {
           style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(14)),
-              backgroundColor: AppColors.primaryColor),
+              backgroundColor: buttonColor ?? AppColors.primaryColor),
           onPressed: onPressed,
-          child: Text(
-            text,
-            style: AppStyles.styleSemiBold16(),
-          )),
+          child: child),
     );
   }
 }
