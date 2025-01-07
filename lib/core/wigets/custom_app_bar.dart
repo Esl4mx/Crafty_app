@@ -19,34 +19,36 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-            horizontal: kHorizontalPadding, vertical: 8),
-        child: Row(
-          children: [
-            CutomAppBarLeadingTrailing(onTap: leadingOnTap, child: leading),
-            const Spacer(),
-            title != null
-                ? Text(title!, style: AppStyles.styleMedium24())
-                : const SizedBox(),
-            const Spacer(),
-            trailing != null
-                ? CutomAppBarLeadingTrailing(
-                    onTap: trailingOnTap ?? () {},
-                    child: trailing!,
-                  )
-                : const SizedBox(
-                    width: 60,
-                  ),
-          ],
-        ),
+      child: Row(
+        children: [
+          Container(
+              margin: EdgeInsets.only(
+                top: 12,
+                left: 24,
+              ),
+              child: CutomAppBarLeadingTrailing(
+                  onTap: leadingOnTap, child: leading)),
+          const Spacer(),
+          title != null
+              ? Text(title!, style: AppStyles.styleMedium24())
+              : const SizedBox(),
+          const Spacer(),
+          trailing != null
+              ? CutomAppBarLeadingTrailing(
+                  onTap: trailingOnTap ?? () {},
+                  child: trailing!,
+                )
+              : const SizedBox(
+                  width: 60,
+                ),
+        ],
       ),
     );
   }
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => const Size(double.maxFinite, 70);
+  Size get preferredSize => const Size(double.maxFinite, 60);
 }
 
 class CutomAppBarLeadingTrailing extends StatelessWidget {
@@ -64,8 +66,9 @@ class CutomAppBarLeadingTrailing extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 60,
-        height: 60,
+        padding: const EdgeInsets.all(12),
+        // width: 60,
+        // height: 60,
         decoration:
             const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
         child: child,

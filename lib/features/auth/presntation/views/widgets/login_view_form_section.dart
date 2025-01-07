@@ -6,18 +6,24 @@ class LoginViewFormSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
         CustomTextFormField(
+          validator: (val) {
+            // if (val!.isEmpty) {
+            //   return "Please Enter Your Email";
+            // }
+          },
           hintText: "Enter Your Email",
           title: "Email",
         ),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         CustomTextFormField(
+          validator: (val) {},
           hintText: "Enter Your Password",
           title: "Password",
           isObscureText: true,
-          sufixx: Icon(
+          sufixx: const Icon(
             Icons.remove_red_eye_rounded,
             color: Color(0xffC9CECF),
           ),

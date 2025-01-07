@@ -15,7 +15,10 @@ class LoginView extends StatelessWidget {
         leadingOnTap: () {
           Navigator.pop(context);
         },
-        leading: const Icon(Icons.arrow_back),
+        leading: const Icon(
+          Icons.arrow_back,
+          size: 24,
+        ),
       ),
       body: const LoginViewBody(),
     );

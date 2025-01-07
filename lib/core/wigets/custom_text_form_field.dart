@@ -8,13 +8,15 @@ class CustomTextFormField extends StatelessWidget {
       required this.hintText,
       this.isObscureText,
       this.keyboardType,
-      this.sufixx});
+      this.sufixx,
+      this.validator});
 
   final String title, hintText;
 
   final bool? isObscureText;
   final TextInputType? keyboardType;
   final Widget? sufixx;
+  final String? Function(String?)? validator;
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +26,7 @@ class CustomTextFormField extends StatelessWidget {
         Text(title, style: AppStyles.styleMedium14()),
         const SizedBox(height: 8),
         TextFormField(
+          validator: validator,
           keyboardType: keyboardType,
           obscureText: isObscureText ?? false,
           decoration: InputDecoration(
