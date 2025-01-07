@@ -11,15 +11,15 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
-        leadingOnTap: () {
-          Navigator.pop(context);
-        },
-        leading: const Icon(
-          Icons.arrow_back,
-          size: 24,
-        ),
-      ),
+      // appBar: CustomAppBar(
+      //   leadingOnTap: () {
+      //     Navigator.pop(context);
+      //   },
+      //   leading: const Icon(
+      //     Icons.arrow_back,
+      //     size: 24,
+      //   ),
+      // ),
       body: const LoginViewBody(),
     );
   }

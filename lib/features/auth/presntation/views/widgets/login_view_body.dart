@@ -4,7 +4,9 @@ import 'package:crafty_app/core/utlis/app_styles.dart';
 import 'package:crafty_app/core/wigets/custom_button.dart';
 import 'package:crafty_app/core/wigets/custom_text_form_field.dart';
 import 'package:crafty_app/features/auth/presntation/views/signup_view.dart';
+import 'package:crafty_app/features/auth/presntation/views/widgets/auth_rich_text.dart';
 import 'package:crafty_app/features/auth/presntation/views/widgets/check_box_section.dart';
+import 'package:crafty_app/features/auth/presntation/views/widgets/google_auth_button.dart';
 import 'package:crafty_app/features/auth/presntation/views/widgets/login_view_form_section.dart';
 import 'package:crafty_app/features/auth/presntation/views/widgets/auth_header.dart';
 import 'package:flutter/material.dart';
@@ -39,6 +41,9 @@ class _LoginViewBodyState extends State<LoginViewBody> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const SizedBox(
+              height: 88,
+            ),
             const AuthViewHeader(
               title: "Welcome Back",
               subtitle: "Welcome Back! Please Enter Your Details.",
@@ -64,42 +69,19 @@ class _LoginViewBodyState extends State<LoginViewBody> {
             const SizedBox(
               height: 16,
             ),
-            CustomButton(
-                buttonColor: const Color(0xffFFFFFF),
-                onPressed: () {},
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    AspectRatio(
-                        aspectRatio: 0.5,
-                        child: Image.asset(Assets.imagesGoogleLogo)),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      "Sign in with google",
-                      style: AppStyles.styleMedium16(),
-                    ),
-                  ],
-                )),
+            GoogleAuthButton(
+              title: "Sign in with google",
+              onPressed: () {},
+            ),
             const SizedBox(
               height: 24,
             ),
-            GestureDetector(
+            AuthRichText(
               onTap: () {
-                Navigator.of(context).pushNamed(SignupView.routeName);
+                Navigator.pushNamed(context, SignupView.routeName);
               },
-              child: Center(
-                child: RichText(
-                    text: TextSpan(children: [
-                  TextSpan(
-                      text: "Don't have an account?",
-                      style: AppStyles.styleRegular14()),
-                  TextSpan(
-                      text: "Sign Up for free",
-                      style: AppStyles.styleMedium16()),
-                ])),
-              ),
+              firstText: "Don’t have an account?",
+              secondText: "Sign Up for free",
             )
           ],
         ),

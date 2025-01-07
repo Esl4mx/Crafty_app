@@ -30,7 +30,7 @@ class CustomTextFormField extends StatelessWidget {
           keyboardType: keyboardType,
           obscureText: isObscureText ?? false,
           decoration: InputDecoration(
-              suffix: sufixx,
+              suffixIcon: sufixx,
               enabledBorder: buildBorder(),
               focusedBorder: buildBorder(),
               hintStyle: AppStyles.styleRegular14(),
