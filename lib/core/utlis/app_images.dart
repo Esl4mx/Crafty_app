@@ -21,5 +21,9 @@ class Assets {
   /// Assets for imagesOnBoarding33
   /// assets/images/on_boarding33.png
   static const String imagesOnBoarding33 = "assets/images/on_boarding33.png";
+
+  /// Assets for imagesProfileImage
+  /// assets/images/profile_image.png
+  static const String imagesProfileImage = "assets/images/profile_image.png";
 }
 

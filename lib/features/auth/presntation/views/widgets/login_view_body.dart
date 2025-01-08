@@ -9,6 +9,7 @@ import 'package:crafty_app/features/auth/presntation/views/widgets/check_box_sec
 import 'package:crafty_app/features/auth/presntation/views/widgets/google_auth_button.dart';
 import 'package:crafty_app/features/auth/presntation/views/widgets/login_view_form_section.dart';
 import 'package:crafty_app/features/auth/presntation/views/widgets/auth_header.dart';
+import 'package:crafty_app/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 class LoginViewBody extends StatefulWidget {
@@ -35,9 +36,9 @@ class _LoginViewBodyState extends State<LoginViewBody> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-      child: SingleChildScrollView(
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -59,7 +60,12 @@ class _LoginViewBodyState extends State<LoginViewBody> {
             const SizedBox(height: 20),
             CustomButton(
                 onPressed: () {
-                  if (formKey.currentState!.validate()) {}
+                  if (formKey.currentState!.validate()) {
+                    Navigator.of(context).pushNamedAndRemoveUntil(
+                      HomeView.routeName,
+                      (route) => false,
+                    );
+                  }
                 },
                 child: Text(
                   "Sign in ",
