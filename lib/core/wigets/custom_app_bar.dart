@@ -1,5 +1,6 @@
 import 'package:crafty_app/constants.dart';
 import 'package:crafty_app/core/utlis/app_styles.dart';
+import 'package:crafty_app/core/wigets/Custom_app_bar_leading_trailing.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -49,30 +50,4 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   // TODO: implement preferredSize
   Size get preferredSize => const Size(double.maxFinite, 60);
-}
-
-class CutomAppBarLeadingTrailing extends StatelessWidget {
-  const CutomAppBarLeadingTrailing({
-    super.key,
-    required this.child,
-    required this.onTap,
-  });
-
-  final Widget child;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.all(12),
-        // width: 60,
-        // height: 60,
-        decoration:
-            const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
-        child: child,
-      ),
-    );
-  }
 }

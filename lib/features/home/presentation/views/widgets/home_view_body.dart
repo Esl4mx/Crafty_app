@@ -1,3 +1,5 @@
+import 'package:crafty_app/core/wigets/search_text_field.dart';
+import 'package:crafty_app/features/home/presentation/views/widgets/custom_home_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -5,6 +7,15 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: CustomHomeAppBar(),
+        ),
+        SliverToBoxAdapter(
+          child: SearchTextField(),
+        )
+      ],
+    );
   }
 }
