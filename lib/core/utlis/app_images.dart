@@ -37,5 +37,13 @@ class Assets {
   /// Assets for imagesSearch
   /// assets/images/search.png
   static const String imagesSearch = "assets/images/search.png";
+
+  /// Assets for imagesSpecialOffer1
+  /// assets/images/special_offer1.png
+  static const String imagesSpecialOffer1 = "assets/images/special_offer1.png";
+
+  /// Assets for imagesSpecialOffer2
+  /// assets/images/special_offer2.png
+  static const String imagesSpecialOffer2 = "assets/images/special_offer2.png";
 }
 
