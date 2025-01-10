@@ -5,15 +5,18 @@ import 'package:crafty_app/features/home/presentation/views/widgets/special_offe
 import 'package:flutter/material.dart';
 
 class SpecialOfferItem extends StatelessWidget {
-  const SpecialOfferItem(
-      {super.key, required this.specialOfferCardModel, this.btnOnPressed});
+  const SpecialOfferItem({
+    super.key,
+    required this.specialOfferCardModel,
+    this.btnOnPressed,
+  });
   final SpecialOfferCardModel specialOfferCardModel;
   final VoidCallback? btnOnPressed;
 
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
-      aspectRatio: 220 / 130,
+      aspectRatio: 264 / 130,
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24),
