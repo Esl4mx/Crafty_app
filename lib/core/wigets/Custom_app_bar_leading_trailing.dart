@@ -5,10 +5,12 @@ class CutomAppBarLeadingTrailing extends StatelessWidget {
     super.key,
     required this.child,
     required this.onTap,
+    this.color,
   });
 
   final Widget child;
   final VoidCallback onTap;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +20,10 @@ class CutomAppBarLeadingTrailing extends StatelessWidget {
         padding: const EdgeInsets.all(12),
         // width: 60,
         // height: 60,
-        decoration:
-            const BoxDecoration(color: Colors.white, shape: BoxShape.circle),
+        decoration: BoxDecoration(
+          color: color ?? Colors.white,
+          shape: BoxShape.circle,
+        ),
         child: child,
       ),
     );
