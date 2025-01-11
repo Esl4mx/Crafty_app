@@ -1,13 +1,11 @@
 import 'package:crafty_app/core/wigets/search_text_field.dart';
-import 'package:crafty_app/features/home/presentation/views/widgets/category_item.dart';
 import 'package:crafty_app/features/home/presentation/views/widgets/category_list_view.dart';
 import 'package:crafty_app/features/home/presentation/views/widgets/custom_home_app_bar.dart';
 import 'package:crafty_app/features/home/presentation/views/widgets/most_interested_list_view.dart';
+import 'package:crafty_app/features/home/presentation/views/widgets/popular_items_list_view.dart';
 import 'package:crafty_app/features/home/presentation/views/widgets/sections_header.dart';
 import 'package:crafty_app/features/home/presentation/views/widgets/special_offer_section.dart';
 import 'package:flutter/material.dart';
-
-import 'custom_most_intereste_container.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -50,6 +48,28 @@ class HomeViewBody extends StatelessWidget {
           ),
         ),
         const SliverToBoxAdapter(child: MostInterestedListView()),
+        const SliverToBoxAdapter(
+          child: SizedBox(
+            height: 24,
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: SectionsHeader(
+            title: "Popular",
+            ontap: () {},
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: SizedBox(
+            height: 16,
+          ),
+        ),
+        const SliverToBoxAdapter(child: PopularItemsListView()),
+        const SliverToBoxAdapter(
+          child: SizedBox(
+            height: 32,
+          ),
+        ),
       ],
     );
   }

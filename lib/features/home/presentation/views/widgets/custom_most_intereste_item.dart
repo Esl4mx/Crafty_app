@@ -5,8 +5,8 @@ import 'package:crafty_app/core/wigets/Custom_app_bar_leading_trailing.dart';
 import 'package:crafty_app/features/home/presentation/view_model/items_model.dart';
 import 'package:flutter/material.dart';
 
-class CustomMostInteresteContainer extends StatelessWidget {
-  const CustomMostInteresteContainer({super.key, required this.items});
+class CustomMostInteresteItem extends StatelessWidget {
+  const CustomMostInteresteItem({super.key, required this.items});
   final ItemsModel items;
 
   @override

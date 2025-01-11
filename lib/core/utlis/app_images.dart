@@ -18,6 +18,42 @@ class Assets {
   /// assets/images/google_logo.png
   static const String imagesGoogleLogo = "assets/images/google_logo.png";
 
+  /// Assets for imagesIconsArmchair
+  /// assets/images/icons/armchair.png
+  static const String imagesIconsArmchair = "assets/images/icons/armchair.png";
+
+  /// Assets for imagesIconsBagShopping2
+  /// assets/images/icons/bag-shopping-2.png
+  static const String imagesIconsBagShopping2 = "assets/images/icons/bag-shopping-2.png";
+
+  /// Assets for imagesIconsBed
+  /// assets/images/icons/bed.png
+  static const String imagesIconsBed = "assets/images/icons/bed.png";
+
+  /// Assets for imagesIconsCart3
+  /// assets/images/icons/cart3.png
+  static const String imagesIconsCart3 = "assets/images/icons/cart3.png";
+
+  /// Assets for imagesIconsHeart
+  /// assets/images/icons/heart.png
+  static const String imagesIconsHeart = "assets/images/icons/heart.png";
+
+  /// Assets for imagesIconsHome
+  /// assets/images/icons/home.png
+  static const String imagesIconsHome = "assets/images/icons/home.png";
+
+  /// Assets for imagesIconsLight
+  /// assets/images/icons/light.png
+  static const String imagesIconsLight = "assets/images/icons/light.png";
+
+  /// Assets for imagesIconsSofa
+  /// assets/images/icons/sofa.png
+  static const String imagesIconsSofa = "assets/images/icons/sofa.png";
+
+  /// Assets for imagesIconsUser
+  /// assets/images/icons/user.png
+  static const String imagesIconsUser = "assets/images/icons/user.png";
+
   /// Assets for imagesMenu
   /// assets/images/menu.png
   static const String imagesMenu = "assets/images/menu.png";
@@ -37,6 +73,14 @@ class Assets {
   /// Assets for imagesOnBoarding33
   /// assets/images/on_boarding33.png
   static const String imagesOnBoarding33 = "assets/images/on_boarding33.png";
+
+  /// Assets for imagesPopChair1
+  /// assets/images/pop_chair1.png
+  static const String imagesPopChair1 = "assets/images/pop_chair1.png";
+
+  /// Assets for imagesPopChair2
+  /// assets/images/pop_chair2.png
+  static const String imagesPopChair2 = "assets/images/pop_chair2.png";
 
   /// Assets for imagesProfileImage
   /// assets/images/profile_image.png
