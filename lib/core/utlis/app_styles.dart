@@ -127,6 +127,15 @@ abstract class AppStyles {
     );
   }
 
+  static TextStyle styleMedium12() {
+    return const TextStyle(
+      color: Color(0xff828A89),
+      fontSize: 12,
+      fontWeight: FontWeight.w500,
+      fontFamily: "Switzer",
+    );
+  }
+
   static TextStyle styleRegular13() {
     return const TextStyle(
       color: Color(0xff828A89),

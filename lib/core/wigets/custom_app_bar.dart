@@ -31,13 +31,18 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   onTap: leadingOnTap, child: leading)),
           const Spacer(),
           title != null
-              ? Text(title!, style: AppStyles.styleMedium24())
+              ? Container(
+                  margin: EdgeInsets.only(top: 12),
+                  child: Text(title!, style: AppStyles.styleMedium24()))
               : const SizedBox(),
           const Spacer(),
           trailing != null
-              ? CutomAppBarLeadingTrailing(
-                  onTap: trailingOnTap ?? () {},
-                  child: trailing!,
+              ? Container(
+                  margin: const EdgeInsets.only(top: 12, right: 24),
+                  child: CutomAppBarLeadingTrailing(
+                    onTap: trailingOnTap ?? () {},
+                    child: trailing!,
+                  ),
                 )
               : const SizedBox(
                   width: 60,

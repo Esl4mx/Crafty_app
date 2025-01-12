@@ -1,4 +1,6 @@
 import 'package:crafty_app/constants.dart';
+import 'package:crafty_app/core/utlis/app_images.dart';
+import 'package:crafty_app/features/home/presentation/view_model/icons_model.dart';
 import 'package:crafty_app/features/home/presentation/views/widgets/category_item.dart';
 import 'package:flutter/material.dart';
 
@@ -10,12 +12,11 @@ class CategoryListView extends StatefulWidget {
 }
 
 class _CategoryListViewState extends State<CategoryListView> {
-  List category = ["Armchair", "Sofa", "Bed", "light"];
-  List<IconData> icons = [
-    Icons.chair,
-    Icons.chair_rounded,
-    Icons.bed,
-    Icons.light
+  List<IconsModel> category = [
+    IconsModel(image: Assets.imagesIconsArmchair, title: "Armchair"),
+    IconsModel(image: Assets.imagesIconsSofa, title: "Sofa"),
+    IconsModel(image: Assets.imagesIconsBed, title: "Bed"),
+    IconsModel(image: Assets.imagesIconsLight, title: "Light"),
   ];
 
   int currentInedx = 0;
@@ -39,8 +40,8 @@ class _CategoryListViewState extends State<CategoryListView> {
                   },
                   child: CategoryItem(
                     isSelected: currentInedx == index,
-                    icon: icons[index],
-                    title: category[index],
+                    image: category[index].image,
+                    title: category[index].title,
                   ),
                 ),
               );

@@ -6,10 +6,10 @@ class CategoryItem extends StatelessWidget {
   const CategoryItem(
       {super.key,
       required this.title,
-      required this.icon,
+      required this.image,
       required this.isSelected});
   final String title;
-  final IconData icon;
+  final String image;
   final bool isSelected;
 
   @override
@@ -25,8 +25,9 @@ class CategoryItem extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              icon,
+            Image.asset(
+              image,
+              scale: 4,
               color: isSelected ? Colors.white : const Color(0xff828A89),
             ),
             const SizedBox(width: 6),

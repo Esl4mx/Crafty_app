@@ -29,13 +29,15 @@ class CustomPopularItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
+              width: 72,
+              height: 72,
               decoration: BoxDecoration(
                 color: Color(0xffF0F0F2),
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Image.asset(
                 items.image,
-                fit: BoxFit.fill,
+                scale: 4,
               ),
             ),
             const SizedBox(

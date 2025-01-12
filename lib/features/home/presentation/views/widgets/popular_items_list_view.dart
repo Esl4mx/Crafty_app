@@ -10,12 +10,12 @@ class PopularItemsListView extends StatelessWidget {
     ItemsModel(
         title: "Swoon Lounge",
         subtitle: "Regal Do Lobo",
-        image: Assets.imagesOnBoarding11,
+        image: Assets.imagesPopChair1,
         price: 136.76),
     ItemsModel(
         title: "Swoon Lounge",
         subtitle: "Regal Do Lobo",
-        image: Assets.imagesOnBoarding22,
+        image: Assets.imagesPopChair2,
         price: 99.9),
   ];
 
@@ -24,7 +24,7 @@ class PopularItemsListView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: kHorizontalPadding),
       child: SizedBox(
-        height: 150,
+        height: 120,
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           physics: const BouncingScrollPhysics(),
