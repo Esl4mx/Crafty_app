@@ -34,6 +34,10 @@ class Assets {
   /// assets/images/icons/cart3.png
   static const String imagesIconsCart3 = "assets/images/icons/cart3.png";
 
+  /// Assets for imagesIconsEllipse
+  /// assets/images/icons/Ellipse.png
+  static const String imagesIconsEllipse = "assets/images/icons/Ellipse.png";
+
   /// Assets for imagesIconsHeart
   /// assets/images/icons/heart.png
   static const String imagesIconsHeart = "assets/images/icons/heart.png";
@@ -54,6 +58,10 @@ class Assets {
   /// assets/images/icons/sofa.png
   static const String imagesIconsSofa = "assets/images/icons/sofa.png";
 
+  /// Assets for imagesIconsUnion
+  /// assets/images/icons/Union.png
+  static const String imagesIconsUnion = "assets/images/icons/Union.png";
+
   /// Assets for imagesIconsUser
   /// assets/images/icons/user.png
   static const String imagesIconsUser = "assets/images/icons/user.png";
@@ -61,10 +69,6 @@ class Assets {
   /// Assets for imagesMenu
   /// assets/images/menu.png
   static const String imagesMenu = "assets/images/menu.png";
-
-  /// Assets for imagesModelsSofaChair
-  /// assets/images/models/sofa_chair.gltf
-  static const String imagesModelsSofaChair = "assets/images/models/sofa_chair.gltf";
 
   /// Assets for imagesModelsSofaChairNew
   /// assets/images/models/sofa_chair_new.glb

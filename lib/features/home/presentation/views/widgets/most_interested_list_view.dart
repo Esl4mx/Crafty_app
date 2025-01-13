@@ -8,36 +8,48 @@ class MostInterestedListView extends StatelessWidget {
 
   static List<ItemsModel> items = [
     ItemsModel(
+      discription:
+          "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
       title: "Ox Mathis Chair",
       subtitle: "Hans j.wenger",
       image: Assets.imagesChair1,
       price: 9.99,
     ),
     ItemsModel(
+      discription:
+          "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
       title: "Fuji Arm Chair",
       subtitle: "Hans j.wenger",
       image: Assets.imagesChair2,
       price: 9.99,
     ),
     ItemsModel(
+      discription:
+          "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
       title: "Ox Mathis Chair",
       subtitle: "Hans j.wenger",
       image: Assets.imagesChair1,
       price: 9.99,
     ),
     ItemsModel(
+      discription:
+          "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
       title: "Fuji Arm Chair",
       subtitle: "Hans j.wenger",
       image: Assets.imagesChair2,
       price: 9.99,
     ),
     ItemsModel(
+      discription:
+          "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
       title: "Ox Mathis Chair",
       subtitle: "Hans j.wenger",
       image: Assets.imagesChair1,
       price: 9.99,
     ),
     ItemsModel(
+      discription:
+          "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
       title: "Fuji Arm Chair",
       subtitle: "Hans j.wenger",
       image: Assets.imagesChair2,
