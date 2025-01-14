@@ -1,4 +1,5 @@
 import 'package:crafty_app/core/helper_functions/on_generate_routes.dart';
+import 'package:crafty_app/core/services/git_it_service.dart';
 import 'package:crafty_app/core/services/shared_preferences_singleton.dart';
 import 'package:crafty_app/core/wigets/app_layout_views.dart';
 import 'package:crafty_app/firebase_options.dart';
@@ -11,6 +12,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   await prefs.init();
+  setupGitit();
   runApp(const Crafty());
 }
 

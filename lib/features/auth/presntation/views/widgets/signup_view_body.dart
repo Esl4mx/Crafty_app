@@ -29,23 +29,6 @@ class SignupViewBody extends StatelessWidget {
             const SizedBox(
               height: 24,
             ),
-            CustomButton(
-                onPressed: () {},
-                child: Text(
-                  "Sign Up",
-                  style:
-                      AppStyles.styleSemiBold16().copyWith(color: Colors.white),
-                )),
-            const SizedBox(
-              height: 16,
-            ),
-            GoogleAuthButton(
-              onPressed: () {},
-              title: "Sign up with Google",
-            ),
-            const SizedBox(
-              height: 24,
-            ),
             AuthRichText(
               firstText: "Already have an account? ",
               secondText: "Sign In",
