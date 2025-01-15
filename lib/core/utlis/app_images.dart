@@ -70,9 +70,29 @@ class Assets {
   /// assets/images/menu.png
   static const String imagesMenu = "assets/images/menu.png";
 
+  /// Assets for imagesModelsChairBlackLounge
+  /// assets/images/models/chair_black_lounge.glb
+  static const String imagesModelsChairBlackLounge = "assets/images/models/chair_black_lounge.glb";
+
+  /// Assets for imagesModelsChairVasa
+  /// assets/images/models/chair_vasa.glb
+  static const String imagesModelsChairVasa = "assets/images/models/chair_vasa.glb";
+
+  /// Assets for imagesModelsOxChair
+  /// assets/images/models/ox_chair.glb
+  static const String imagesModelsOxChair = "assets/images/models/ox_chair.glb";
+
+  /// Assets for imagesModelsSofaChairGreen
+  /// assets/images/models/sofa_chair_green.glb
+  static const String imagesModelsSofaChairGreen = "assets/images/models/sofa_chair_green.glb";
+
   /// Assets for imagesModelsSofaChairNew
   /// assets/images/models/sofa_chair_new.glb
   static const String imagesModelsSofaChairNew = "assets/images/models/sofa_chair_new.glb";
+
+  /// Assets for imagesModelsSwoonLounge
+  /// assets/images/models/swoon_lounge.glb
+  static const String imagesModelsSwoonLounge = "assets/images/models/swoon_lounge.glb";
 
   /// Assets for imagesNotifications
   /// assets/images/notifications.png

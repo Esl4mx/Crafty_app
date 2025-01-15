@@ -1,5 +1,6 @@
 import 'package:crafty_app/constants.dart';
 import 'package:crafty_app/core/utlis/app_images.dart';
+import 'package:crafty_app/features/details/presentation/view/details_view.dart';
 import 'package:crafty_app/features/home/presentation/view_model/items_model.dart';
 import 'package:crafty_app/features/home/presentation/views/widgets/custom_popular_item.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ class PopularItemsListView extends StatelessWidget {
   const PopularItemsListView({super.key});
   static List<ItemsModel> items = [
     ItemsModel(
+        srcModel: Assets.imagesModelsSwoonLounge,
         discription:
             "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
         title: "Swoon Lounge",
@@ -15,6 +17,7 @@ class PopularItemsListView extends StatelessWidget {
         image: Assets.imagesPopChair1,
         price: 136.76),
     ItemsModel(
+        srcModel: Assets.imagesModelsChairBlackLounge,
         discription:
             "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
         title: "Swoon Lounge",
@@ -36,8 +39,15 @@ class PopularItemsListView extends StatelessWidget {
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.only(right: 16),
-              child: CustomPopularItem(
-                items: items[index],
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => DetailsView(items: items[index]),
+                  ));
+                },
+                child: CustomPopularItem(
+                  items: items[index],
+                ),
               ),
             );
           },

@@ -1,4 +1,5 @@
 import 'package:crafty_app/core/utlis/app_images.dart';
+import 'package:crafty_app/features/details/presentation/view/details_view.dart';
 import 'package:crafty_app/features/home/presentation/view_model/items_model.dart';
 import 'package:crafty_app/features/home/presentation/views/widgets/custom_most_intereste_item.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ class MostInterestedListView extends StatelessWidget {
 
   static List<ItemsModel> items = [
     ItemsModel(
+      srcModel: Assets.imagesModelsSofaChairNew,
       discription:
           "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
       title: "Ox Mathis Chair",
@@ -16,38 +18,7 @@ class MostInterestedListView extends StatelessWidget {
       price: 9.99,
     ),
     ItemsModel(
-      discription:
-          "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
-      title: "Fuji Arm Chair",
-      subtitle: "Hans j.wenger",
-      image: Assets.imagesChair2,
-      price: 9.99,
-    ),
-    ItemsModel(
-      discription:
-          "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
-      title: "Ox Mathis Chair",
-      subtitle: "Hans j.wenger",
-      image: Assets.imagesChair1,
-      price: 9.99,
-    ),
-    ItemsModel(
-      discription:
-          "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
-      title: "Fuji Arm Chair",
-      subtitle: "Hans j.wenger",
-      image: Assets.imagesChair2,
-      price: 9.99,
-    ),
-    ItemsModel(
-      discription:
-          "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
-      title: "Ox Mathis Chair",
-      subtitle: "Hans j.wenger",
-      image: Assets.imagesChair1,
-      price: 9.99,
-    ),
-    ItemsModel(
+      srcModel: Assets.imagesModelsSofaChairGreen,
       discription:
           "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
       title: "Fuji Arm Chair",
@@ -70,7 +41,13 @@ class MostInterestedListView extends StatelessWidget {
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.only(right: 16),
-              child: CustomMostInteresteItem(items: items[index]),
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => DetailsView(items: items[index]),
+                    ));
+                  },
+                  child: CustomMostInteresteItem(items: items[index])),
             );
           },
         ),

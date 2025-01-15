@@ -29,8 +29,7 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => const HomeView(),
       );
-    case DetailsView.routeName:
-      return MaterialPageRoute(builder: (_) => const DetailsView());
+
     default:
       return MaterialPageRoute(builder: (_) => const Scaffold());
   }

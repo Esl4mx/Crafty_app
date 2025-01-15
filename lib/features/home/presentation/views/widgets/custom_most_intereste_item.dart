@@ -18,59 +18,54 @@ class CustomMostInteresteItem extends StatelessWidget {
     // Calculate a responsive width for each item, e.g., 60% of the screen width
     double itemWidth = screenWidth * 0.6; // Adjust percentage as needed
 
-    return GestureDetector(
-      onTap: () {
-        Navigator.of(context).pushNamed(DetailsView.routeName);
-      },
-      child: Container(
-        width: itemWidth, // Set dynamic width based on screen size
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: AppColors.containerColor,
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              AspectRatio(
-                aspectRatio: 1.5,
-                child: Center(
-                  child: Image.asset(
-                    items.image,
-                  ),
+    return Container(
+      width: itemWidth, // Set dynamic width based on screen size
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        color: AppColors.containerColor,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            AspectRatio(
+              aspectRatio: 1.5,
+              child: Center(
+                child: Image.asset(
+                  items.image,
                 ),
               ),
-              const Spacer(),
-              ListTile(
-                contentPadding: const EdgeInsets.all(0),
-                title: Text(
-                  items.title,
-                  style: AppStyles.styleSemiBold16(),
-                ),
-                subtitle: Text(
-                  items.subtitle,
-                  style: AppStyles.styleRegular13(),
-                ),
-                trailing: CutomAppBarLeadingTrailing(
-                  color: AppColors.primaryColor,
-                  onTap: () {},
-                  child: Image.asset(
-                    Assets.imagesIconsBagShopping2,
-                    scale: 4,
-                  ),
+            ),
+            const Spacer(),
+            ListTile(
+              contentPadding: const EdgeInsets.all(0),
+              title: Text(
+                items.title,
+                style: AppStyles.styleSemiBold16(),
+              ),
+              subtitle: Text(
+                items.subtitle,
+                style: AppStyles.styleRegular13(),
+              ),
+              trailing: CutomAppBarLeadingTrailing(
+                color: AppColors.primaryColor,
+                onTap: () {},
+                child: Image.asset(
+                  Assets.imagesIconsBagShopping2,
+                  scale: 4,
                 ),
               ),
-              const SizedBox(
-                height: 12,
-              ),
-              Text(
-                "\$ ${items.price.toString()}",
-                style: AppStyles.styleMedium16()
-                    .copyWith(color: const Color(0xffF2A666)),
-              ),
-            ],
-          ),
+            ),
+            const SizedBox(
+              height: 12,
+            ),
+            Text(
+              "\$ ${items.price.toString()}",
+              style: AppStyles.styleMedium16()
+                  .copyWith(color: const Color(0xffF2A666)),
+            ),
+          ],
         ),
       ),
     );
