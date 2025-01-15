@@ -1,5 +1,7 @@
 import 'package:crafty_app/constants.dart';
 import 'package:crafty_app/core/utlis/app_styles.dart';
+import 'package:crafty_app/features/details/presentation/view/widgets/details_view_header.dart';
+import 'package:crafty_app/features/details/presentation/view/widgets/rating_section.dart';
 import 'package:crafty_app/features/home/presentation/view_model/items_model.dart';
 import 'package:flutter/material.dart';
 
@@ -14,30 +16,36 @@ class DetailsViewBody extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          ModelView(
-            items: items,
+          Expanded(
+            flex: 2,
+            child: ModelView(
+              items: items,
+            ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 24,
           ),
-          Row(
-            children: [
-              Text(
-                items.title,
-                style: AppStyles.styleMedium24(),
-              ),
-              Spacer(),
-              Text(
-                items.price.toString(),
-                style: AppStyles.styleMedium24()
-                    .copyWith(color: Color(0xffF2A666)),
-              )
-            ],
-          ),
-          SizedBox(
+          DetailsViewHeader(items: items),
+          const SizedBox(
             height: 24,
           ),
+          const RatingSection(),
+          const SizedBox(
+            height: 24,
+          ),
+          Text("Description", style: AppStyles.styleMedium24()),
+          const SizedBox(
+            height: 8,
+          ),
+          Expanded(
+            child: Text(
+              items.discription,
+              style: AppStyles.styleRegular14().copyWith(height: 1.7),
+              softWrap: true,
+            ),
+          )
         ],
       ),
     );

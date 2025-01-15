@@ -11,12 +11,11 @@ class ModelView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 300,
+        height: 400,
         child: ModelViewer(
           src: items.srcModel,
           ar: true,
           autoRotate: true,
-          disableZoom: true,
         ));
   }
 }

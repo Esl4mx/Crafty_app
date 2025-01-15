@@ -43,10 +43,12 @@ class CustomMostInteresteItem extends StatelessWidget {
               title: Text(
                 items.title,
                 style: AppStyles.styleSemiBold16(),
+                overflow: TextOverflow.ellipsis,
               ),
               subtitle: Text(
                 items.subtitle,
                 style: AppStyles.styleRegular13(),
+                overflow: TextOverflow.ellipsis,
               ),
               trailing: CutomAppBarLeadingTrailing(
                 color: AppColors.primaryColor,
