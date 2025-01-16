@@ -2,26 +2,38 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:crafty_app/core/utlis/app_colors.dart';
 import 'package:crafty_app/core/utlis/app_images.dart';
 import 'package:crafty_app/core/utlis/app_styles.dart';
+import 'package:crafty_app/features/favourit/presentation/views/favourit_view.dart';
 import 'package:crafty_app/features/home/presentation/view_model/icons_model.dart';
+import 'package:crafty_app/features/home/presentation/views/home_view.dart';
+import 'package:crafty_app/features/shopping/presentation/views/shopping_view.dart';
 import 'package:flutter/material.dart';
 
-class CustomBottomNavBar extends StatefulWidget {
+class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({super.key});
 
-  @override
-  State<CustomBottomNavBar> createState() => _CustomBottomNavBarState();
-}
+  static int bottomNavIndex = 0;
 
-class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
-  List<IconsModel> iconList = [
+  static List<IconsModel> iconList = [
     IconsModel(image: Assets.imagesIconsHome, title: "Home"),
     IconsModel(image: Assets.imagesIconsHeart, title: "Favorite"),
-    IconsModel(image: Assets.imagesIconsCart3, title: "Shopping Cart"),
+    IconsModel(image: Assets.imagesIconsCart3, title: "Shopping"),
     IconsModel(image: Assets.imagesIconsUser, title: "Profile"),
   ];
-  int bottomNavIndex = 0;
+
   @override
   Widget build(BuildContext context) {
+    Future<Object?>? navigateTo(int index) {
+      if (index == 0) {
+        bottomNavIndex = index;
+        return Navigator.of(context).pushNamed(HomeView.routeName);
+      } else if (index == 1) {
+        bottomNavIndex = index;
+        return Navigator.of(context).pushNamed(FavouritView.routeName);
+      } else if (index == 2) {
+        return Navigator.of(context).pushNamed(ShoppingView.routeName);
+      }
+    }
+
     return AnimatedBottomNavigationBar.builder(
       itemCount: iconList.length,
       tabBuilder: (index, isActive) {
@@ -46,7 +58,11 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
       height: 90,
       activeIndex: bottomNavIndex,
       gapLocation: GapLocation.center,
-      onTap: (index) => setState(() => bottomNavIndex = index),
+      onTap: (index) {
+        bottomNavIndex = index;
+
+        navigateTo(index);
+      },
     );
   }
 }

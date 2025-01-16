@@ -2,6 +2,7 @@ import 'package:crafty_app/core/utlis/app_colors.dart';
 import 'package:crafty_app/core/utlis/app_images.dart';
 import 'package:crafty_app/core/utlis/app_styles.dart';
 import 'package:crafty_app/core/wigets/custom_button.dart';
+import 'package:crafty_app/features/details/presentation/view/widgets/custom_circle_container.dart';
 import 'package:crafty_app/features/home/presentation/view_model/items_model.dart';
 import 'package:flutter/material.dart';
 
@@ -110,28 +111,6 @@ class _CustomDetailsBottomNavBarState extends State<CustomDetailsBottomNavBar> {
           ),
         ),
       ),
-    );
-  }
-}
-
-class CustomCircleContainer extends StatelessWidget {
-  const CustomCircleContainer({
-    super.key,
-    this.child,
-    this.onTap,
-    this.color,
-  });
-  final Widget? child;
-  final void Function()? onTap;
-  final Color? color;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 35,
-      width: 35,
-      decoration: BoxDecoration(shape: BoxShape.circle, color: color),
-      child: InkWell(onTap: onTap, child: Center(child: child)),
     );
   }
 }

@@ -39,12 +39,13 @@ class DetailsViewBody extends StatelessWidget {
           const SizedBox(
             height: 8,
           ),
-          Expanded(
-            child: Text(
-              items.discription,
-              style: AppStyles.styleRegular14().copyWith(height: 1.7),
-              softWrap: true,
-            ),
+          Text(
+            items.discription,
+            style: AppStyles.styleRegular14().copyWith(height: 1.7),
+            softWrap: true,
+          ),
+          SizedBox(
+            height: 16,
           )
         ],
       ),

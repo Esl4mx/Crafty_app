@@ -5,8 +5,8 @@ import 'package:crafty_app/core/wigets/Custom_app_bar_leading_trailing.dart';
 import 'package:crafty_app/features/home/presentation/view_model/items_model.dart';
 import 'package:flutter/material.dart';
 
-class CustomPopularItem extends StatelessWidget {
-  const CustomPopularItem({super.key, required this.items});
+class FavouritListViewItem extends StatelessWidget {
+  const FavouritListViewItem({super.key, required this.items});
   final ItemsModel items;
 
   @override
@@ -20,7 +20,6 @@ class CustomPopularItem extends StatelessWidget {
     double itemHight = screenHight * 0.13; // Adjust percentage as needed
 
     return Container(
-      width: itemWidth, // Set dynamic width based on screen size
       height: itemHight,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),

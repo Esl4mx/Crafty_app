@@ -134,6 +134,18 @@ class Assets {
   /// assets/images/search.png
   static const String imagesSearch = "assets/images/search.png";
 
+  /// Assets for imagesShoppingChair
+  /// assets/images/shopping_chair.png
+  static const String imagesShoppingChair = "assets/images/shopping_chair.png";
+
+  /// Assets for imagesShoppingChair1
+  /// assets/images/shopping_chair1.png
+  static const String imagesShoppingChair1 = "assets/images/shopping_chair1.png";
+
+  /// Assets for imagesShoppingChair2
+  /// assets/images/shopping_chair2.png
+  static const String imagesShoppingChair2 = "assets/images/shopping_chair2.png";
+
   /// Assets for imagesSpecialOffer1
   /// assets/images/special_offer1.png
   static const String imagesSpecialOffer1 = "assets/images/special_offer1.png";

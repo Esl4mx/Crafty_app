@@ -45,8 +45,10 @@ class _DetailsViewState extends State<DetailsView> {
                 color: Colors.black,
               ),
       ),
-      body: DetailsViewBody(
-        items: widget.items,
+      body: SafeArea(
+        child: DetailsViewBody(
+          items: widget.items,
+        ),
       ),
     );
   }
