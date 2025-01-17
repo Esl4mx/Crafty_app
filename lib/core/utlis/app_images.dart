@@ -22,6 +22,10 @@ class Assets {
   /// assets/images/icons/add_to_cart.png
   static const String imagesIconsAddToCart = "assets/images/icons/add_to_cart.png";
 
+  /// Assets for imagesIconsAlignCenter
+  /// assets/images/icons/align_center.png
+  static const String imagesIconsAlignCenter = "assets/images/icons/align_center.png";
+
   /// Assets for imagesIconsArmchair
   /// assets/images/icons/armchair.png
   static const String imagesIconsArmchair = "assets/images/icons/armchair.png";
@@ -37,6 +41,10 @@ class Assets {
   /// Assets for imagesIconsCart3
   /// assets/images/icons/cart3.png
   static const String imagesIconsCart3 = "assets/images/icons/cart3.png";
+
+  /// Assets for imagesIconsDeliveryPlane
+  /// assets/images/icons/delivery_plane.png
+  static const String imagesIconsDeliveryPlane = "assets/images/icons/delivery_plane.png";
 
   /// Assets for imagesIconsEllipse
   /// assets/images/icons/Ellipse.png
@@ -58,9 +66,21 @@ class Assets {
   /// assets/images/icons/people_icon.png
   static const String imagesIconsPeopleIcon = "assets/images/icons/people_icon.png";
 
+  /// Assets for imagesIconsProfileOrders
+  /// assets/images/icons/profile_orders.png
+  static const String imagesIconsProfileOrders = "assets/images/icons/profile_orders.png";
+
+  /// Assets for imagesIconsProfileWallet
+  /// assets/images/icons/profile_wallet.png
+  static const String imagesIconsProfileWallet = "assets/images/icons/profile_wallet.png";
+
   /// Assets for imagesIconsScan
   /// assets/images/icons/scan.png
   static const String imagesIconsScan = "assets/images/icons/scan.png";
+
+  /// Assets for imagesIconsSecurity
+  /// assets/images/icons/security.png
+  static const String imagesIconsSecurity = "assets/images/icons/security.png";
 
   /// Assets for imagesIconsSofa
   /// assets/images/icons/sofa.png
@@ -73,6 +93,10 @@ class Assets {
   /// Assets for imagesIconsUser
   /// assets/images/icons/user.png
   static const String imagesIconsUser = "assets/images/icons/user.png";
+
+  /// Assets for imagesIconsUserCircle
+  /// assets/images/icons/user_circle.png
+  static const String imagesIconsUserCircle = "assets/images/icons/user_circle.png";
 
   /// Assets for imagesMenu
   /// assets/images/menu.png

@@ -5,6 +5,7 @@ import 'package:crafty_app/core/utlis/app_styles.dart';
 import 'package:crafty_app/features/favourit/presentation/views/favourit_view.dart';
 import 'package:crafty_app/features/home/presentation/view_model/icons_model.dart';
 import 'package:crafty_app/features/home/presentation/views/home_view.dart';
+import 'package:crafty_app/features/profile/presentation/views/profile_view.dart';
 import 'package:crafty_app/features/shopping/presentation/views/shopping_view.dart';
 import 'package:flutter/material.dart';
 
@@ -31,6 +32,8 @@ class CustomBottomNavBar extends StatelessWidget {
         return Navigator.of(context).pushNamed(FavouritView.routeName);
       } else if (index == 2) {
         return Navigator.of(context).pushNamed(ShoppingView.routeName);
+      } else if (index == 3) {
+        return Navigator.of(context).pushNamed(ProfileView.routeName);
       }
     }
 
