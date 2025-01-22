@@ -3,8 +3,10 @@ import 'package:crafty_app/features/home/presentation/views/widgets/category_lis
 import 'package:crafty_app/features/home/presentation/views/widgets/custom_home_app_bar.dart';
 import 'package:crafty_app/features/home/presentation/views/widgets/most_interested_list_view.dart';
 import 'package:crafty_app/features/home/presentation/views/widgets/popular_items_list_view.dart';
+import 'package:crafty_app/features/home/presentation/views/widgets/seaarch_section.dart';
 import 'package:crafty_app/features/home/presentation/views/widgets/sections_header.dart';
 import 'package:crafty_app/features/home/presentation/views/widgets/special_offer_section.dart';
+import 'package:crafty_app/features/search/presentation/views/search_view.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -17,8 +19,8 @@ class HomeViewBody extends StatelessWidget {
         const SliverToBoxAdapter(
           child: CustomHomeAppBar(),
         ),
-        const SliverToBoxAdapter(
-          child: SearchTextField(),
+        SliverToBoxAdapter(
+          child: SearchSection(),
         ),
         const SliverToBoxAdapter(
           child: SpecialOfferSection(),

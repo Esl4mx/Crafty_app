@@ -6,6 +6,7 @@ import 'package:crafty_app/features/home/presentation/views/home_view.dart';
 import 'package:crafty_app/features/home/presentation/views/widgets/popular_items_list_view.dart';
 import 'package:crafty_app/features/on_boarding/presntation/view/on_boarding_view.dart';
 import 'package:crafty_app/features/profile/presentation/views/profile_view.dart';
+import 'package:crafty_app/features/search/presentation/views/search_view.dart';
 import 'package:crafty_app/features/shopping/presentation/views/shopping_view.dart';
 import 'package:crafty_app/features/splash_screen/presentation/view/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -45,6 +46,10 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
     case ProfileView.routeName:
       return MaterialPageRoute(
         builder: (context) => const ProfileView(),
+      );
+    case SearchView.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const SearchView(),
       );
     default:
       return MaterialPageRoute(builder: (_) => const Scaffold());

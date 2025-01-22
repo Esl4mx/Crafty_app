@@ -42,6 +42,10 @@ class Assets {
   /// assets/images/icons/cart3.png
   static const String imagesIconsCart3 = "assets/images/icons/cart3.png";
 
+  /// Assets for imagesIconsCloseCircle
+  /// assets/images/icons/close_circle.png
+  static const String imagesIconsCloseCircle = "assets/images/icons/close_circle.png";
+
   /// Assets for imagesIconsDeliveryPlane
   /// assets/images/icons/delivery_plane.png
   static const String imagesIconsDeliveryPlane = "assets/images/icons/delivery_plane.png";

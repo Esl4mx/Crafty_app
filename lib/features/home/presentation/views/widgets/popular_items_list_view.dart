@@ -12,7 +12,7 @@ class PopularItemsListView extends StatelessWidget {
         srcModel: Assets.imagesModelsSwoonLounge,
         discription:
             "The Swedish Designer Monica Forstar’s Style Is Characterised By her Enternal love For New Materials and Beautiful Pure Shapes.",
-        title: "Swoon Lounge",
+        title: "Swoon chair Lounge",
         subtitle: "Regal Do Lobo",
         image: Assets.imagesPopChair1,
         price: 136.76),

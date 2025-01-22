@@ -38,24 +38,26 @@ class CustomMostInteresteItem extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            ListTile(
-              contentPadding: const EdgeInsets.all(0),
-              title: Text(
-                items.title,
-                style: AppStyles.styleSemiBold16(),
-                overflow: TextOverflow.ellipsis,
-              ),
-              subtitle: Text(
-                items.subtitle,
-                style: AppStyles.styleRegular13(),
-                overflow: TextOverflow.ellipsis,
-              ),
-              trailing: CutomAppBarLeadingTrailing(
-                color: AppColors.primaryColor,
-                onTap: () {},
-                child: Image.asset(
-                  Assets.imagesIconsBagShopping2,
-                  scale: 4,
+            Material(
+              child: ListTile(
+                contentPadding: const EdgeInsets.all(0),
+                title: Text(
+                  items.title,
+                  style: AppStyles.styleSemiBold16(),
+                  overflow: TextOverflow.ellipsis,
+                ),
+                subtitle: Text(
+                  items.subtitle,
+                  style: AppStyles.styleRegular13(),
+                  overflow: TextOverflow.ellipsis,
+                ),
+                trailing: CutomAppBarLeadingTrailing(
+                  color: AppColors.primaryColor,
+                  onTap: () {},
+                  child: Image.asset(
+                    Assets.imagesIconsBagShopping2,
+                    scale: 4,
+                  ),
                 ),
               ),
             ),
